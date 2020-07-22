@@ -1,0 +1,10 @@
+
+<%# should display an appointment's doctor (FAILED - 1)
+  should display an appointment's patient (FAILED - 2)
+  should display an appointment's date and time (FAILED - 3)
+  should not have an index page (FAILED - 4) %>
+
+
+<%= @appointment.appointment_datetime.strftime("%B %d, %Y at %k:%M")%>
+<%= link_to @appointment.doctor.name, doctor_path(@appointment.doctor_id) %>
+<%= link_to @appointment.patient.name, patient_path(@appointment.patient_id) %>
