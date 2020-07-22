@@ -1,0 +1,20 @@
+
+<h1 >Dr: <%= @doctor.name%></h1>
+<hr>
+<h2>Department:</h2>
+    <li><%= @doctor.department %></li><br>
+    <h2>Patients:</h2>
+    <ul>
+        <% @doctor.patients.each do |p| %>
+        <li><%= link_to p.name, p %></li>
+        <% end%>
+       
+    </ul>
+    <h2>Appointments:</h2>
+    <ul>
+        <% Appointment.find(@doctor) do |a| %>
+        <li><%= a.date %></li>
+        <% end%>
+       
+    </ul>
+ <hr>

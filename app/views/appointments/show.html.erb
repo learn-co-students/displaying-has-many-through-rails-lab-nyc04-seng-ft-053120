@@ -1,0 +1,7 @@
+<h1>Appointment</h1>
+    
+    <h3>Dr: <%=  link_to @appointment.find_doctor_instance.name, @appointment.find_doctor_instance %></h3>
+
+    <h3>Patient: <%= link_to @appointment.find_patient_instance.name, @appointment.find_patient_instance %></h3>
+
+     <h2>Date: <%= @appointment.date %></h2>

@@ -1,0 +1,9 @@
+<h1>Doctors</h1>
+<hr>
+<% @doctors.each do |d|%>
+
+<h1>Dr: <%= link_to d.name, d %></h1>
+    <h2>Department:</h2>
+    <li><%= d.department %></li><br>
+ <hr>
+<% end %>
